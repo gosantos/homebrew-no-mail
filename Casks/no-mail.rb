@@ -1,6 +1,6 @@
 cask "no-mail" do
-  version "1.0.1"
-  sha256 "562321541e206a8bf5d8d672bbf4afee9982b05c0f2910851f1987501d04a209"
+  version "1.0.2"
+  sha256 "d77e28c969e8a37ee10984107d1b54d88a2ee647283a9f9ee85552449ccacc10"
 
   url "https://github.com/gosantos/no-mail/releases/download/v#{version}/noMail-#{version}.zip"
   name "noMail"
