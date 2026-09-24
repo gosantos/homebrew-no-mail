@@ -15,9 +15,9 @@ cask "no-mail" do
   # The app is ad-hoc signed (not notarized with a paid Apple Developer ID),
   # so macOS would otherwise quarantine it and refuse to open it. Strip the
   # quarantine flag on install so it launches without the Gatekeeper prompt.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/noMail.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{appdir}}/noMail.app"]
   end
 
   uninstall quit: "com.nomail.NoMail"
